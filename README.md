@@ -43,7 +43,7 @@ lowlight_project/
 
 ```
 git clone <your_repo_link>
-cd lowlight_project
+cd Joint_Denoising_and_low_light_image_enhancement
 ```
 
 ## 2. Create virtual environment (recommended)
