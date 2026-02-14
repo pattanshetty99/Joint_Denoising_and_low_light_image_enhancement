@@ -7,7 +7,8 @@ from models.model import LowLightEnhancer_Color
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 model = LowLightEnhancer_Color().to(device)
-model.load_state_dict(torch.load("lowlight_model.pth", map_location=device))
+checkpoint = torch.load("checkpoints/lowlight_model.pth", map_location=device)
+model.load_state_dict(checkpoint["model"])
 model.eval()
 
 input_dir = "validation_input"
